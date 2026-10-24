@@ -1,0 +1,32 @@
+== ast:10:6:0.5   files 10601  tokens 4141942  fingerprints 1096904  (tokenizer=ast k=10 w=6 -> guaranteed match length 15 tokens)
+   time: tokenize 9.121s | fingerprint 0.023s  index 0.018s  score 1.698s  (compare phase 1.740s) | total 10.861s
+   best F1 0.9718 at threshold 0.54: precision 0.9805, recall 0.9632, false positives 205
+   recall by obfuscation level: L1 1.000, L2 0.964, L3 0.941
+   top negative Jaccard: [0.735849, 0.719512, 0.696429]
+== ast:12:8:0.5   files 10601  tokens 4141942  fingerprints 855746  (tokenizer=ast k=12 w=8 -> guaranteed match length 19 tokens)
+   time: tokenize 9.102s | fingerprint 0.022s  index 0.015s  score 1.152s  (compare phase 1.189s) | total 10.291s
+   best F1 0.9642 at threshold 0.50: precision 0.9752, recall 0.9535, false positives 259
+   recall by obfuscation level: L1 1.000, L2 0.948, L3 0.930
+   top negative Jaccard: [0.746667, 0.670886, 0.625]
+== ast:8:4:0.5   files 10601  tokens 4141942  fingerprints 1453547  (tokenizer=ast k=8 w=4 -> guaranteed match length 11 tokens)
+   time: tokenize 9.032s | fingerprint 0.034s  index 0.029s  score 2.318s  (compare phase 2.381s) | total 11.413s
+   best F1 0.9742 at threshold 0.59: precision 0.9805, recall 0.9679, false positives 206
+   recall by obfuscation level: L1 1.000, L2 0.964, L3 0.952
+   top negative Jaccard: [0.781609, 0.773913, 0.767442]
+== lex:10:6:0.5   files 10601  tokens 7349676  fingerprints 1880444  (tokenizer=lex k=10 w=6 -> guaranteed match length 15 tokens)
+   time: tokenize 3.196s | fingerprint 0.044s  index 0.030s  score 1.577s  (compare phase 1.651s) | total 4.847s
+   best F1 0.7189 at threshold 0.47: precision 0.8354, recall 0.6309, false positives 1329
+   recall by obfuscation level: L1 1.000, L2 0.752, L3 0.308
+   top negative Jaccard: [0.687179, 0.663415, 0.661905]
+== raw:10:6:0.5   files 10601  tokens 7349676  fingerprints 2060503  (tokenizer=raw k=10 w=6 -> guaranteed match length 15 tokens)
+   time: tokenize 3.623s | fingerprint 0.071s  index 0.934s  score 0.083s  (compare phase 1.088s) | total 4.711s
+   best F1 0.0000 at threshold 0.99: precision 1.0000, recall 0.0000, false positives 0
+   recall by obfuscation level: L1 0.000, L2 0.000, L3 0.000
+   top negative Jaccard: [0.16726, 0.161404, 0.161094]
+
+config,best_threshold,precision,recall,f1,recall_L1,recall_L2,recall_L3
+ast:10:6:0.5,0.54,0.9805,0.9632,0.9718,1.0000,0.9636,0.9408
+ast:12:8:0.5,0.50,0.9752,0.9535,0.9642,1.0000,0.9484,0.9297
+ast:8:4:0.5,0.59,0.9805,0.9679,0.9742,1.0000,0.9639,0.9519
+lex:10:6:0.5,0.47,0.8354,0.6309,0.7189,1.0000,0.7525,0.3081
+raw:10:6:0.5,0.99,1.0000,0.0000,0.0000,0.0000,0.0000,0.0000
